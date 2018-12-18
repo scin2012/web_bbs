@@ -1,0 +1,24 @@
+20:34:18 add topic form:  ImmutableMultiDict([('title', 'qqq'), ('content', 'aa')])
+20:34:18 添加话题成功
+20:34:18 添加的新话题： < Topic
+id: (1)
+views: (1)
+title: (qqq)
+content: (aa)
+ct: (1545136458)
+ut: (1545136458)
+user_id: (5) 
+>
+
+20:34:32 add topic form:  ImmutableMultiDict([('title', '111'), ('content', '1111')])
+20:34:32 添加话题成功
+20:34:32 添加的新话题： < Topic
+id: (2)
+views: (1)
+title: (111)
+content: (1111)
+ct: (1545136472)
+ut: (1545136472)
+user_id: (5) 
+>
+
