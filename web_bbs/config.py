@@ -1,1 +1,1 @@
-secret_key = 'web18 bbs'
+secret_key = 'web bbs'
