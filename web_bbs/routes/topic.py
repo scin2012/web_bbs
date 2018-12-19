@@ -12,6 +12,7 @@ from flask import (
 from models.user import User
 from models.topic import Topic
 from models.reply import Reply
+from models.board import Board
 
 from utils import log
 
@@ -24,25 +25,43 @@ csrf_token = dict()
 
 @main.route('/')
 def index():
-    m = Topic.all()
+    board_id = int(request.args.get('board_id',-1))
+
+    if board_id == -1:
+        m = Topic.all()
+    else:
+        m = Topic.find_all(board_id = board_id)
+
     u = current_user()
     token = str(uuid.uuid4())
     csrf_token[token] = u.id
-    return render_template('topic/index.html',ms = m,token = token)
+    bs = Board.all()
+
+    if u.role == 1:
+        current = "管理员"
+    else:
+        current = "普通用户"
+
+    return render_template('topic/index.html',ms = m,token = token,bs = bs,current = current)
 
 
 @main.route("/new")
 def new():
-    return render_template("topic/new.html")
+    bs = Board.all()
+    return render_template("topic/new.html",bs = bs)
 
 #新增话题
 @main.route('/add',methods=['POST'])
 def add():
     form = request.form
-    log('add topic form: ',form)
+    log('topic form:',form)
+
     u = current_user()
+
     t=Topic.new(form,user_id = u.id)
-    log('添加话题成功')
+    t.board_id=int(t.board_id)
+
+    log('新增话题属于模版--', t.board_id)
     return redirect(url_for('.detail',id=t.id))
 
 #删除话题
@@ -64,8 +83,17 @@ def delete():
 
 @main.route('/<int:id>')
 def detail(id):
-    t=Topic.get(id)
-    log('添加的新话题：',t)
-    return render_template('topic/detail.html',topic = t)
+    t = Topic.get(id)
+    b_id = t.board_id
+    b = Board.find_by(id = b_id)
+    user_id = t.user_id
+    auther = User.find(user_id)
+
+    return render_template('topic/detail.html',topic = t,b_title = b.title,auther = auther.username)
+
+
+
+
+
 
 

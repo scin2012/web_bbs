@@ -29,6 +29,9 @@ app.register_blueprint(topic_routes,url_prefix='/topic')
 from routes.reply import main as reply_routes
 app.register_blueprint(reply_routes,url_prefix='/reply')
 
+from routes.board import main as board_routes
+app.register_blueprint(board_routes,url_prefix='/board')
+
 
 # 运行代码
 if __name__ == '__main__':

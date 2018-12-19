@@ -5,6 +5,7 @@ class User(Model):
         self.id = form.get('id',None)
         self.username = form.get('username','')
         self.password = form.get('password', '')
+        self.role = form.get('role',11)
 
     def salt_password(self,password,salt = 'vn3q4@(*&^*'):
         import hashlib

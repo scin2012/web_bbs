@@ -1,24 +1,94 @@
-20:34:18 add topic form:  ImmutableMultiDict([('title', 'qqq'), ('content', 'aa')])
-20:34:18 添加话题成功
-20:34:18 添加的新话题： < Topic
+14:53:13 login....form: ImmutableMultiDict([('username', '222'), ('password', '222')])
+14:53:13 登陆成功。。。
+14:53:13 设置前  session: <SecureCookieSession {'_permanent': True, 'user_id': 1}>
+14:53:13 session: <SecureCookieSession {'_permanent': True, 'user_id': 2}>
+14:53:20 板块的id= 1
+14:53:20 板块： < Board
 id: (1)
-views: (1)
-title: (qqq)
-content: (aa)
-ct: (1545136458)
-ut: (1545136458)
-user_id: (5) 
+title: (置顶)
+ct: (1545199131)
+ut: (1545199131) 
 >
 
-20:34:32 add topic form:  ImmutableMultiDict([('title', '111'), ('content', '1111')])
-20:34:32 添加话题成功
-20:34:32 添加的新话题： < Topic
-id: (2)
-views: (1)
-title: (111)
-content: (1111)
-ct: (1545136472)
-ut: (1545136472)
-user_id: (5) 
->
-
+14:53:20 b_title: 置顶
+14:53:23 板块的id= 2
+14:53:23 板块： None
+14:54:21 新增话题属于模版： 3
+14:54:21 板块的id= 3
+14:54:21 板块： None
+14:55:40 新增话题属于模版-- 3
+14:55:40 板块的id= 3
+14:55:40 板块： None
+14:58:20 新增话题属于模版-- 3
+14:58:20 板块的id= 3
+14:58:20 板块： None
+15:03:08 板块的id= 1
+15:03:08 板块： None
+15:04:49 板块的id= 1
+15:04:49 板块： 置顶
+15:04:49 b_title: 置顶
+15:04:52 板块的id= 2
+15:05:34 板块的id= 1
+15:06:33 板块的id= 1
+15:06:33 板块的名称： 置顶
+15:08:32 板块的id= 1
+15:08:43 板块的id= 3
+15:13:53 新增话题属于模版-- 2
+15:13:53 板块的id= 2
+15:15:19 板块的id= 2
+15:15:19 板块的名称： 精华
+15:15:22 板块的id= 2
+15:15:22 板块的名称： 精华
+15:15:25 板块的id= 3
+15:15:25 板块的名称： 最新
+15:17:11 topic form: ImmutableMultiDict([('title', 'test2'), ('board_id', '3'), ('content', '22')])
+15:17:11 新增话题属于模版-- 3
+15:17:11 板块的id= 3
+15:19:52 topic form: ImmutableMultiDict([('title', 'test3'), ('board_id', '1'), ('content', 'ss')])
+15:19:52 新增话题属于模版-- 1
+15:19:52 板块的id= 1
+15:19:52 板块的名称： 置顶
+15:19:59 板块的id= 1
+15:19:59 板块的名称： 置顶
+15:20:02 板块的id= 3
+15:20:05 板块的id= 2
+15:20:23 板块的id= 3
+15:20:23 板块的名称： 最新
+15:21:27 板块的id= 2
+15:21:27 板块的名称： 精华
+15:24:49 board_id= -1
+15:24:50 board_id= -1
+15:24:51 board_id= 1
+15:26:08 board_id= -1
+15:26:09 board_id= -1
+15:26:11 board_id= 1
+15:26:12 board_id= 2
+15:26:13 board_id= 3
+15:29:28 板块的id= 1
+15:29:28 板块的名称： 置顶
+15:29:32 板块的id= 2
+15:29:32 板块的名称： 精华
+15:30:21 板块的id= 1
+15:30:21 板块的名称： 置顶
+19:00:16 login....form: ImmutableMultiDict([('username', '222'), ('password', '1234')])
+19:00:16 登陆失败。。。
+19:00:26 login....form: ImmutableMultiDict([('username', '1234'), ('password', '1234')])
+19:00:26 登陆失败。。。
+19:00:34 login....form: ImmutableMultiDict([('username', '1234'), ('password', '1234')])
+19:00:34 登陆成功。。。
+19:00:34 设置前  session: <SecureCookieSession {'_permanent': True, 'user_id': 2}>
+19:00:34 session: <SecureCookieSession {'_permanent': True, 'user_id': 3}>
+19:01:17 topic form: ImmutableMultiDict([('title', '圣诞节怎么过'), ('board_id', '1'), ('content', '111')])
+19:01:17 新增话题属于模版-- 1
+19:02:46 topic form: ImmutableMultiDict([('title', '猫猫不爱我了'), ('board_id', '2'), ('content', '猫猫猫猫猫')])
+19:02:46 新增话题属于模版-- 2
+19:03:15 topic form: ImmutableMultiDict([('title', '宝宝宝宝宝'), ('board_id', '3'), ('content', '嘻嘻嘻嘻嘻')])
+19:03:15 新增话题属于模版-- 3
+19:04:37 topic form: ImmutableMultiDict([('title', 'test'), ('board_id', '2'), ('content', '')])
+19:04:38 新增话题属于模版-- 2
+19:05:03 login....form: ImmutableMultiDict([('username', 'admin'), ('password', 'admin')])
+19:05:03 登陆成功。。。
+19:05:03 设置前  session: <SecureCookieSession {'_permanent': True, 'user_id': 3}>
+19:05:03 session: <SecureCookieSession {'_permanent': True, 'user_id': 1}>
+19:05:26 topic form: ImmutableMultiDict([('title', '我是管理员'), ('board_id', '1'), ('content', 'hhh')])
+19:05:26 新增话题属于模版-- 1
